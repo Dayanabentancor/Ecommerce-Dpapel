@@ -4,31 +4,29 @@ import './App.css'
 import ItemListContainer from './Component/ItemListConteiner/ItemListContainer'
 import NavBar from './Component/NavBar/NavBar'
 import { ChakraProvider } from '@chakra-ui/react'
+import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom'
+
 
 function App() {
   const [count, setCount] = useState(0)
 
+
+
   return (
-    <>
-    <NavBar/>
-    <ItemListContainer title= 'Tienda'/>
-      {/* <div>
-       
-       </div> */}
-      {/* <h1>Vite + React</h1>
-      <div className="card">
-      <button onClick={() => setCount((count) => count + 1)}>
-      count is {count}
-      </button>
-      <p>
-      Edit <code>src/App.jsx</code> and save to test HMR
-      </p>
-      </div>
-      <p className="read-the-docs">
-      Click on the Vite and React logos to learn more
-      </p> */}
-      <ChakraProvider></ChakraProvider>
-    </>
+
+    <ChakraProvider>
+      
+      <BrowserRouter>
+      <NavBar/>
+    <Routes>
+      
+      <Route path='/' element={ <ItemListContainer/>} />
+      <Route path='/categorias/:categoryId' element={ <ItemListContainer/>} />
+    </Routes>
+      </BrowserRouter>
+      </ChakraProvider>
+     
+ 
   )
 }
 

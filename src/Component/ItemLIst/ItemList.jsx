@@ -1,11 +1,11 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
 import React from 'react'
 import Item from '../Item/Item'
 
 const ItemList = ({productos}) => {
     
   return (
-    <Box>
+    <Flex wrap={'wrap'} justify={'center'} align={'center'}>
       {
         productos.map((prod) => (
             <Box key={prod.id}>
@@ -14,7 +14,7 @@ const ItemList = ({productos}) => {
 
         ))
       }
-    </Box>
+    </Flex>
   )
 }
 
