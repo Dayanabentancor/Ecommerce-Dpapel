@@ -5,7 +5,7 @@ import { TiShoppingCart } from "react-icons/ti";
 const CartWidget = () => {
   return (
     <Box mr={10}>
-      <TiShoppingCart />
+      <TiShoppingCart color='#628A66' />
     </Box>
   )
 }

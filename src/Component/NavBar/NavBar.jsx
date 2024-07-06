@@ -26,7 +26,7 @@ const NavBar = () => {
         <Flex className="navBar" justify={'space-between'} align={'center'} height={'10vh'} w={'100%'}>
             <Heading className="logo" ml={1} mt={0} ><Link to={ '/'}><img src="/src/assets/mi-logo.svg" alt="logo" /></Link></Heading>
             <Menu>
-                <MenuButton as={Button} rightIcon={<FaCaretDown />}>
+                <MenuButton as={Button} rightIcon={<FaCaretDown />} colorScheme='#628A66' >
                     Menu
                 </MenuButton>
                 <MenuList>

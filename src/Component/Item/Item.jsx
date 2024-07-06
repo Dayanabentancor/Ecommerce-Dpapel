@@ -5,12 +5,12 @@ import ItemCount from '../ItemCount/ItemCount'
 const Item = ({nombre, img, precio, stock}) => {
   return (
     <Card maxW='sm' m={5} >
-  <CardBody>
+  <CardBody  maxW='sm'>
     <Image
       src={img}
       alt={nombre}
-      w={'250px'}
-      h={'250px'}
+      w={'20dvh'}
+      h={'20dvh'}
       objectFit={'cover'}
       borderRadius='lg'
     />
@@ -31,7 +31,7 @@ const Item = ({nombre, img, precio, stock}) => {
       <Button variant='ghost' color='#628A66'>
        Ver detalles
       </Button>
-      <ItemCount initialValue={1} stock={stock}/>
+      <ItemCount initialValue={1} stock={stock} size='sm'/>
     </ButtonGroup>
   </CardFooter>
 </Card>     

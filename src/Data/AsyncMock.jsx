@@ -7,7 +7,7 @@ export const productos = [
         categoria: "Packaging",
         stock: 15,
         descripcion: "Adhesivos de papel glossy para cerrare bolsas",
-       img: <img src="../src/assets/Adhesivos-cerrar-bolsas.svg" alt="Adhesivos para cerrar bolsas" />,
+       img: <img src="https://1drv.ms/u/s!AnOiC69LayxJhJFNJCWJixZAcZlSvw?e=3nfmUP" alt="Adhesivos para cerrar bolsas" />,
           
     },
 
