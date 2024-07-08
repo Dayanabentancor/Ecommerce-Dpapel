@@ -1,16 +1,16 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text, Button, ButtonGroup, Divider, Image, Img, } from '@chakra-ui/react'
-
+import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text, Button, ButtonGroup, Divider, Image, Img } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
-const Item = ({nombre, img, precio, stock}) => {
+const Item = ({nombre, id, img, precio, stock}) => {
   return (
     <Card maxW='sm' m={5} >
   <CardBody  maxW='sm'>
     <Image
       src={img}
       alt={nombre}
-      w={'20dvh'}
-      h={'20dvh'}
+      w={'60dvh'}
+      h={'40dvh'}
       objectFit={'cover'}
       borderRadius='lg'
     />
@@ -29,7 +29,7 @@ const Item = ({nombre, img, precio, stock}) => {
         Agregar al carrito
       </Button>
       <Button variant='ghost' color='#628A66'>
-       Ver detalles
+      <Link to={`/producto/${id}`}>Ver detalle</Link>
       </Button>
       <ItemCount initialValue={1} stock={stock} size='sm'/>
     </ButtonGroup>

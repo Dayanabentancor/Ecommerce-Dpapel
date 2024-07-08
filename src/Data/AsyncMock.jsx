@@ -1,5 +1,6 @@
 export const productos = [
 
+
     {
         id: 1,
         nombre: "Adhesivos para cerrar bolsas",
@@ -7,7 +8,7 @@ export const productos = [
         categoria: "Packaging",
         stock: 15,
         descripcion: "Adhesivos de papel glossy para cerrare bolsas",
-       img: <img src="https://1drv.ms/u/s!AnOiC69LayxJhJFNJCWJixZAcZlSvw?e=3nfmUP" alt="Adhesivos para cerrar bolsas" />,
+       img: "../src/assets/Adhesivos-cerrar-bolsas.svg",
           
     },
 
@@ -18,7 +19,7 @@ export const productos = [
         categoria: "Identidad Visual",
         stock: 100,
         descripcion: "Diseño de logo ",
-       img: <img src="../src/assets/diseño-de-logo.svg" alt="Diseño de logo" />,
+       img: "../src/assets/diseño-de-logo.svg",
     },
 
     {
@@ -28,7 +29,7 @@ export const productos = [
         categoria: "Productos Digitales",
         stock: 100,
         descripcion: "Diseño de invitaciones digitales para eventos ",
-       img: <img src="../src/assets/Invitacion-digital.svg" alt="Diseño de logo" />,
+       img: "../src/assets/Invitacion-digital.svg",
     },
 ]
 
