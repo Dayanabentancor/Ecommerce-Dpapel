@@ -6,6 +6,7 @@ import { getProductsByCategory } from '../../Data/AsyncMock'
 import { useParams } from 'react-router-dom'
 
 
+
 const ItemListContainer = ({title}) => {
    const [productos, setProductos ] = useState ([])
    const {categoryId } = useParams()
@@ -28,12 +29,13 @@ const ItemListContainer = ({title}) => {
   return (
     <Flex direction={'column'} justify={'center'} align={'center'}>
         <Heading color="#628A66" >{title}</Heading>
-       
- 
         
          <ItemList productos={productos} />
         
     </Flex>
+
+       
+ 
 
    
     

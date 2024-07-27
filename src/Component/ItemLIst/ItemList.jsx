@@ -9,7 +9,7 @@ const ItemList = ({productos}) => {
       {
         productos.map((prod) => (
             <Box key={prod.id}>
-                <Item {...prod} />
+                <Item {...prod}  />
             </Box>
 
         ))

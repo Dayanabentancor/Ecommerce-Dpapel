@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text, Button, ButtonGroup, Divider, Image, Img } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
-const Item = ({nombre, id, img, precio, stock}) => {
+const Item = ({nombre, id, img, precio, stock,}) => {
   return (
     <Card maxW='sm' m={5} >
   <CardBody  maxW='sm'>
@@ -20,14 +20,13 @@ const Item = ({nombre, id, img, precio, stock}) => {
       <Text color='#628A66' fontSize='2xl'>
         ${precio}
       </Text>
+     
     </Stack>
   </CardBody>
   <Divider />
   <CardFooter>
     <ButtonGroup spacing='2'>
-      <Button variant='solid' color='#628A66'>
-        Agregar al carrito
-      </Button>
+    
       <Button variant='ghost' color='#628A66'>
       <Link to={`/producto/${id}`}>Ver detalle</Link>
       </Button>

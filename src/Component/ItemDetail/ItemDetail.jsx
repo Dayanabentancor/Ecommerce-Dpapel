@@ -1,11 +1,21 @@
 
-import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text, Button, ButtonGroup, Divider, Image, } from '@chakra-ui/react'
+import React, { useContext } from 'react'
+import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text, ButtonGroup, Divider, Image, } from '@chakra-ui/react'
 import ItemCount from '../ItemCount/ItemCount'
+import { ToastContainer, toast } from 'react-toastify';
 
 const ItemDetail = ({ nombre, descripcion, id, img, precio, stock}) => {
-
-    
+const {addItem} = useContext(Context)
+  const onAdd = (quantity) => {
+    const Item ={
+      id,
+      nombre,
+      precio
+    }
+    addItem(Item, quantity)
+    toast(`Agregaste ${quantity} productos`)
+  }
+     
   return (
     
           <Card maxW='sm' m={5} >
@@ -32,16 +42,15 @@ const ItemDetail = ({ nombre, descripcion, id, img, precio, stock}) => {
         <Divider />
         <CardFooter>
           <ButtonGroup spacing='2'>
-            <Button variant='solid' color='#628A66'>
-              Agregar al carrito
-            </Button>
+            <ItemCount initialValue={1} stock={stock}  onAdd={onAdd} size='sm'/>
            
-            <ItemCount initialValue={1} stock={stock} size='sm'/>
           </ButtonGroup>
         </CardFooter>
+        <ToastContainer/>
       </Card>     
  
   )
 }
+           
 
 export default ItemDetail

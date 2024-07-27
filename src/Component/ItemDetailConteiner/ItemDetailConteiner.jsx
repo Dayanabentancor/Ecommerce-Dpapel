@@ -28,7 +28,7 @@ const ItemDetailConteiner = () => {
             </Flex>
 
             :
-            <Flex justify={'center'} align={'center'} h={'70vh'}>
+            <Flex justify={'center'} align={'center'} h={'90vh'}>
                     <ItemDetail {...product} />
                 </Flex>
 
